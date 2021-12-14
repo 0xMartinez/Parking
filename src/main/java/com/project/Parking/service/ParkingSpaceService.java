@@ -4,7 +4,6 @@ import com.project.Parking.dto.ParkingSpaceDTO;
 import com.project.Parking.repository.ParkingSpaceDAO;
 import com.project.Parking.repository.ReservationDAO;
 import com.project.Parking.exception.ConflictExceptionHandler;
-import com.project.Parking.exception.NotFoundExceptionHandler;
 import com.project.Parking.model.ParkingSpace;
 import com.project.Parking.model.Reservation;
 import lombok.AllArgsConstructor;
@@ -38,30 +37,7 @@ public class ParkingSpaceService {
         parkingSpace.setParkingSpaceId(nr);
         return parkingSpaceDAO.save(parkingSpace);
     }
-/*
-    public List<ParkingSpace> getFreeParkingSpaces(){
 
-        List<ParkingSpace> parkingSpaces = new ArrayList<>();
-        List<Reservation> reservations = new ArrayList<>();
-        List<ParkingSpace> freeParkingSpaces = new ArrayList<>();
-        parkingSpaces.addAll(parkingSpaceDAO.findAll());
-        reservations.addAll(reservationDAO.findAll());
-
-        if (reservations.isEmpty()) {
-            return parkingSpaceDAO.findAll();
-        }
-        freeParkingSpaces.addAll(parkingSpaces);
-
-        for (ParkingSpace parkingSpace : parkingSpaces) {
-            for (Reservation reservation : reservations) {
-                if ((parkingSpace.getParkingSpaceId().equals(reservation.getParkingSpaceId()))) {
-                    freeParkingSpaces.remove(parkingSpace);
-                }
-            }
-        }
-        return freeParkingSpaces;
-    }
-*/
     public List<ParkingSpaceDTO> getFreeParkingSpaces(){
 
     List<ParkingSpaceDTO> parkingSpaces = new ArrayList<>();

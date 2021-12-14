@@ -20,7 +20,7 @@ public class ParkingSpace {
     private boolean forDisabled;
 
 
-    @OneToOne(cascade = CascadeType.REMOVE)
+    @OneToOne
     @JoinColumn(name = "parkingSpace_id")
     private Reservation reservation;
 

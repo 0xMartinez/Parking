@@ -27,13 +27,6 @@ public class ReservationController {
         return "Reservation added";
     }
 
-    /*
-    @ApiOperation(value = "List reservation for provided customer")
-    @GetMapping(value = "/list/{CustomerId}")
-    public List<Reservation> getReservation(String CustomerId) {
-        return reservationService.getReservation(CustomerId);
-    }
-*/
     @ApiOperation(value = "List reservation for all")
     @GetMapping(value = "/list/{CustomerId}")
     public List<ReservationDTO> getReservations(String CustomerId) {

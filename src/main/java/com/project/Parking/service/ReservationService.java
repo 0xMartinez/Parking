@@ -46,7 +46,6 @@ public class ReservationService {
     }
     public void deleteReservation(String id){
         Optional<Reservation> optionalReservation = reservationDAO.findById(id);
-        Reservation reservation = new Reservation();
         if(optionalReservation.isEmpty()) {
             throw new NotFoundExceptionHandler("There is no such reservation.");
         }

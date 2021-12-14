@@ -27,7 +27,7 @@ public class Customer implements Serializable {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.REMOVE)
     private List<Reservation> reservations;
 
-    @ApiParam(hidden = true)
+    //@ApiParam(hidden = true)
     @JsonManagedReference
     public List<Reservation> getReservations() {
         return reservations;

@@ -2,10 +2,7 @@ package com.project.Parking.model;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,7 +22,7 @@ public class Reservation {
     private String customerId;
 
     @JsonBackReference
-    @ManyToOne(fetch = FetchType.LAZY ,cascade = CascadeType.REMOVE)
+    @ManyToOne
     @JoinColumn(name = "customer")
     private Customer customer;
 

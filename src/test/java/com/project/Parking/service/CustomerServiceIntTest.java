@@ -2,6 +2,7 @@ package com.project.Parking.service;
 
 import com.project.Parking.model.Customer;
 import com.project.Parking.model.Reservation;
+import lombok.AllArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
