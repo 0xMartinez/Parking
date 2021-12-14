@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parking</title>
+</head>
+<body>
+<form action="parking/add" method="POST">
+    <p>Add parking space.</p>
+    <div>
+        <label for="PlaceNumber">Place number:</label>
+        <input name="PlaceNumber" id="PlaceNumber">
+    </div>
+    <div>
+        <label for="Storey">Storey:</label>
+        <input name="Storey" id="Storey">
+    </div>
+    <div>
+        <input type="checkbox" id="ForDisabled" name="ForDisabled">
+        <label for="ForDisabled">For disabled?</label>
+    </div>
+    <div>
+        <button>Add</button>
+    </div>
+</form>
+
+<form action="parking/list" method="GET">
+    <button>List free parking spaces</button>
+</form>
+
+</body>
+</html>

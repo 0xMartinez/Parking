@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation</title>
+</head>
+<body>
+<form action="reservation/add" method="POST">
+    <p>Add reservation</p>
+    <div>
+        <label for="ParkingSpaceId">Parking space ID</label>
+        <input name="ParkingSpaceId" id="ParkingSpaceId">
+    </div>
+    <div>
+        <label for="CustomerId">Customer ID</label>
+        <input name="CustomerId" id="CustomerId">
+    </div>
+    <div>
+        <button>Add Reservation</button>
+    </div>
+</form>
+<form action="reservation/delete/ParkingSpaceId_" method="POST">
+    <p>Delete reservation</p>
+    <div>
+        <label for="ParkingSpaceId">Parking space ID</label>
+        <input name="ParkingSpaceId" id="ParkingSpaceId_">
+    </div>
+    <div>
+        <button>Delete</button>
+    </div>
+</form>
+
+<form action="reservation/list/CustomerId" method="GET">
+    <p>View reservation for customer</p>
+    <div>
+        <label for="CustomerId">Customer ID</label>
+        <input name="CustomerId" id="CustomerId_">
+    </div>
+    <div>
+        <button>List reservations</button>
+    </div>
+</form>
+</body>
+</html>
