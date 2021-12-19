@@ -44,7 +44,7 @@ Struktura danych:
  ## Zbudowanie aplikacji
   Aby zbudować aplikację należy w CMD wejść w folder projektu a następnie wywołać następującą komendę:
   ```curl
-  mvnw spring-boot:build-info
+  mvnw install
   ```
   
  ## Uruchomienie
